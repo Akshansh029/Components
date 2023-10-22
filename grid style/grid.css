@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+}
+.container {
+    background-color: lightgray;
+    height: 100vh;
+    width: 100vw;
+    padding: 20px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    overflow: hidden;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;
+}
+#header{
+    background-color: coral;
+}
+#sidebar{
+    background-color:bisque;
+}
+#main{
+    background-color:lightskyblue;
+}
+#content1{
+    background-color: lightgreen;
+}
+#content2{
+    background-color: lightseagreen;
+}
+#content3{
+    background-color: lightpink;
+}
+#footer{
+    background-color:crimson;
+}
+
+@media screen and (min-width:768px){
+    .container {
+            background-color: lightgray;
+            height: 100vh;
+            width: 100vw;
+            padding: 20px;
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-rows: repeat(10, 1fr);
+            grid-template-columns: repeat(16, 1fr);
+            overflow: hidden;
+        }
+    .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    #header {
+            background-color: coral;
+            grid-row: 1/ span 2;
+            grid-column-start: 1;
+            grid-column-end: 20;
+        }
+    
+        #sidebar {
+            background-color: bisque;
+            grid-row-start: 3;
+            grid-row-end: 11;
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+    
+        #main {
+            background-color: lightskyblue;
+            grid-area: 3/5/6/20;
+        }
+    
+        #content1 {
+            background-color: lightgreen;
+            grid-area: 6/5/10/9;
+        }
+    
+        #content2 {
+            background-color: lightseagreen;
+            grid-area: 6/9/10/14;
+        }
+    
+        #content3 {
+            background-color: lightpink;
+            grid-area: 6/14/10/20;
+        }
+    
+        #footer {
+            background-color: crimson;
+            grid-area: 10/5/11/20;
+        }
+}
